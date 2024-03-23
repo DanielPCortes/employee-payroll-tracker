@@ -9,6 +9,7 @@ const collectEmployees = function() {
   let coninuation = true
   
   while (coninuation) {
+    // Declaration of of each element
     let employeeFN
     let employeeLN
     let employeeSal
