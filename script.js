@@ -42,14 +42,29 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+
   // Used the Array reduce method to find the average salary
   const salAvg = employeesArray.reduce((x,y) => (x+y.salary),0)/employeesArray.length
-  console.log('The average salary for our employees is ' + Number(salAvg))
+
+  // Using math.round to round the average
+  const salRound = Math.round(salAvg)
+
+  // Console log of the rounded average
+  console.log(`The average salary for our employee(s) is $` + Number(salRound))
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+
+  // Uses Math.floor and Math.random on the length emplyeesArray
+  const randomEmpIndex = Math.floor(Math.random() * employeesArray.length)
+
+  // Assigns a constant of randomEmp to the previous constant that is above
+  const randomEmp = employeesArray[randomEmpIndex]
+
+  // Console logs the random employee
+  console.log(`The winner of our random draw is: ${randomEmp.firstName} ${randomEmp.lastName}, congratulations!`)
 }
 
 /*
